@@ -35,7 +35,7 @@ build() {
     git clone "$srcdir/$_gitname" "$srcdir/$_gitname-build"
     cd "$srcdir/$_gitname-build"
     mkdir build && cd build
-    qmake -r TARGET=${pkgname/-git} ..
+    qmake -qt5 -r TARGET=${pkgname/-git} ..
     make
 }
 
